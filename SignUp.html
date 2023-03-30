@@ -1,0 +1,65 @@
+{% extends "base_out.html" %}
+
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+
+
+<h1>Sign Up Form</h1>
+
+	
+
+	<form class="form-signin" method="POST" action="/signup">
+
+
+		{{ form.hidden_tag() }}
+		<div>
+			{{form.username.label}}<br>
+			{{form.username(size=30)}}
+			
+		</div>
+
+		<div>
+			{{form.password.label}}<br>
+			{{form.password(size=30)}}
+			
+		</div>
+
+		<div>
+  			{{form.firstname.label}}<br>
+  			{{form.firstname(size=30)}}
+		</div>
+		<div>
+  			{{form.lastname.label}}<br>
+  			{{form.lastname(size=30)}}
+		</div>
+		<div>
+			{{form.email.label}}<br>
+			{{form.email(size=30)}}
+		</div>
+		<div>
+			{{form.submit(size=30)}}<br>
+		
+		</div>
+			
+			
+			
+			
+			
+		
+
+	</form>
+	</body>
+	</html>
+	
+</body>
+
+</html>
+
+{% endblock %}
+	

@@ -1,0 +1,18 @@
+{% extends "base_in.html" %}
+
+
+{% block content %}
+
+	<body>
+
+		<h2>Rifles {{myvariable}}</h2>
+
+		<ul><li><h3>Revision</h3></li>
+			{% for rifle in weapons %}
+			<li>{{rifle}}</li>
+			{% endfor %}
+		<li><h3>Rifle Recognition Test</h3></li></ul>
+
+	</body>
+</html>
+{% endblock %}
