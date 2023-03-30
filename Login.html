@@ -1,0 +1,41 @@
+{% extends "base_out.html" %}
+
+{% block content %}
+
+<head>
+	<title>Homepage</title>
+	<link rel="stylesheet" type="text/css" href="Basic.css">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	
+	<form action="form-signin" method="get">
+	<h2>Login</h2>
+		{{ form.hidden_tag() }}
+
+		<div>
+			{{ form.username.label }}<br>
+			{{ form.username(size=30) }}
+		</div>
+			{{ form.password.label }}<br>
+			{{ form.password(size=30) }}
+
+		<div>
+			{{ form.submit(size=30) }}
+		</div>
+
+	</form>
+
+
+	<h5>If you are not a member, please <a href="/signup">Sign Up</a></h5>
+	
+</body>
+
+</html>
+
+{% endblock %}
